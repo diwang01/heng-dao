@@ -8,7 +8,7 @@ import org.apache.ibatis.executor.statement.StatementHandler;
  * @author  barney.wang
  *
  */
-public interface SqlConverter {
+public interface SqlConverterIF {
     /**
      * sql 代码转换
      * @param sql
