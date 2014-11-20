@@ -10,7 +10,7 @@ import java.lang.reflect.*;
  *  反射实现
  * Created by wangdi on 14-11-20.
  */
-public class Reflections {
+public final class Reflections {
 
     private static final Logger logger = LoggerFactory.getLogger(Reflections.class);
 
