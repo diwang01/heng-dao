@@ -13,9 +13,9 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDaoIF {
 
 	@Override
 	public boolean insertUser(UserBean user) {
-		ShardParam shardParam = new ShardParam("Shard-User", user.getId(), user);
+		ShardParam shardParam = new ShardParam("Shard_User", user.getId(), user);
         
-        return getSqlSession().insert("NS-User.insertUser", shardParam) > 0;
+        return getSqlSession().insert("demo.insertUser", shardParam) > 0;
 	}
 
 }

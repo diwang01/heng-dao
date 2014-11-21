@@ -42,6 +42,7 @@
         <property name="releaseHelperThreads" value="8"/>
         <property name="connectionTestStatement" value="select 1 from dual"/>
     </bean>
+    
     <bean id="demoSqlSessionFactory"
           class="org.hengdao.support.SqlSessionFactoryBean">
         <property name="mainDataSource" ref="dataSourceMaster"/>
@@ -57,14 +58,14 @@
         </property>
         <property name="shardStrategy">
             <map>
-                <entry key="Shard-User">
-                    <value>org.summercool.mybatis.demo.shard.UserShardStrategy</value>
+                <entry key="Shard_User">
+                    <value>org.hengdao.demo.strategy.UserShardStrategy</value>
                 </entry>
             </map>
         </property>
     </bean>
 
-    <!--<bean id="userDao" class="org.summercool.mybatis.demo.dao.impl.UserDaoImpl">-->
-        <!--<property name="sqlSessionFactory" ref="demoSqlSessionFactory"/>-->
-    <!--</bean>-->
+    <bean id="userDao" class="org.hengdao.demo.dao.impl.UserDaoImpl">
+        <property name="sqlSessionFactory" ref="demoSqlSessionFactory"/>
+    </bean>
 </beans>

@@ -20,7 +20,7 @@
         <property name="fileEncoding" value="UTF-8"/>
     </bean>
 
-    <!--<bean id="userService" class="org.summercool.mybatis.demo.service.impl.UserServiceImpl"/>-->
+    <bean id="userService" class="org.hengdao.demo.service.impl.UserServiceImpl"/>
 
     <!-- 事务配置 -->
     <bean name="userTransactionManager"
