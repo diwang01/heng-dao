@@ -14,5 +14,5 @@ public interface SqlConverterIF {
      * @param sql
      * @param statementHandler
      */
-    public abstract  String convert(String sql,StatementHandler statementHandler);
+     abstract  String convert(String sql,StatementHandler statementHandler);
 }
