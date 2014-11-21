@@ -1,20 +1,12 @@
 package org.hengdao.support;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
 import org.apache.ibatis.builder.xml.XMLMapperBuilder;
 import org.apache.ibatis.executor.ErrorContext;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.hengdao.converter.SqlConverterIF;
+import org.hengdao.converter.SqlConverter;
 import org.hengdao.converter.SqlConverterImpl;
 import org.hengdao.interceptor.ShardIntercept;
 import org.hengdao.multiDataSource.MultiDataSourceIF;
@@ -30,6 +22,13 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 import org.springframework.util.ObjectUtils;
+
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * sqlSession工厂类
@@ -56,7 +55,7 @@ public class SqlSessionFactoryBean  implements ApplicationContextAware, MultiDat
     private Map<String, ShardStrategy> shardStrategyMap = new HashMap<String, ShardStrategy>();
     private Map<String, Class<?>> shardStrategyConfig = new HashMap<String, Class<?>>();
 
-    private SqlConverterIF sqlConverter = new SqlConverterImpl();
+    private SqlConverter sqlConverter = new SqlConverterImpl();
 
     public DataSource getMainDataSource() {
         return mainDataSource;
