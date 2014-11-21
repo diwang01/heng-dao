@@ -32,6 +32,7 @@ import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 import org.springframework.util.ObjectUtils;
 
 /**
+ * sqlSession工厂类
  * Created by wangdi on 14-11-20.
  * @author  barney.wang
  */
