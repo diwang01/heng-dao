@@ -47,16 +47,11 @@ public class ShardParam {
         this.params = params;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("ShardParam [name=");
-        builder.append(name);
-        builder.append(", shardValue=");
-        builder.append(shardValue);
-        builder.append(", params=");
-        builder.append(params);
-        builder.append("]");
-        return builder.toString();
-    }
+	@Override
+	public String toString() {
+		return "ShardParam [name=" + name + ", shardValue=" + shardValue
+				+ ", params=" + params + "]";
+	}
+
+   
 }
