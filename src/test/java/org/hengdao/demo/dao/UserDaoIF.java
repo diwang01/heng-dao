@@ -1,7 +1,12 @@
 package org.hengdao.demo.dao;
 
+import org.hengdao.demo.Model.UserBean;
+
 /**
- * Created by wangdi on 14-11-21.
+ * 
+ * @author barney.wang
  */
 public interface UserDaoIF {
+	
+	 public boolean insertUser(UserBean user);
 }

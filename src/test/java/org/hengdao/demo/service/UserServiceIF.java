@@ -1,7 +1,13 @@
 package org.hengdao.demo.service;
 
 /**
- * Created by wangdi on 14-11-21.
+ *@author barney.wang
  */
 public interface UserServiceIF {
+	
+	
+	/**
+	 * 添加用户
+	 */
+	 public void insertUser();
 }
