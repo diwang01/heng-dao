@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * sqlSession工厂类
  * Created by wangdi on 14-11-20.
  * @author  barney.wang
  */
