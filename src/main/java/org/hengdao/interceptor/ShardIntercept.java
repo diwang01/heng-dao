@@ -5,7 +5,7 @@ import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.plugin.Intercepts;
 import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Signature;
-import org.hengdao.converter.SqlConverter;
+import org.hengdao.converter.SqlConverterIF;
 import org.hengdao.utils.Reflections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +23,7 @@ public class ShardIntercept implements Interceptor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ShardIntercept.class);
 
-    private SqlConverter sqlConverter;
+    private SqlConverterIF sqlConverter;
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
@@ -55,7 +55,7 @@ public class ShardIntercept implements Interceptor {
 
     }
 
-    public void setSqlConverter(SqlConverter sqlConverter) {
+    public void setSqlConverter(SqlConverterIF sqlConverter) {
         this.sqlConverter = sqlConverter;
     }
 }
