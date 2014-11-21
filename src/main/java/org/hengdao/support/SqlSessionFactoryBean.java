@@ -6,7 +6,7 @@ import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.hengdao.converter.SqlConverter;
+import org.hengdao.converter.SqlConverterIF;
 import org.hengdao.converter.SqlConverterImpl;
 import org.hengdao.interceptor.ShardIntercept;
 import org.hengdao.multiDataSource.MultiDataSourceIF;
@@ -55,7 +55,7 @@ public class SqlSessionFactoryBean  implements ApplicationContextAware, MultiDat
     private Map<String, ShardStrategy> shardStrategyMap = new HashMap<String, ShardStrategy>();
     private Map<String, Class<?>> shardStrategyConfig = new HashMap<String, Class<?>>();
 
-    private SqlConverter sqlConverter = new SqlConverterImpl();
+    private SqlConverterIF sqlConverter = new SqlConverterImpl();
 
     public DataSource getMainDataSource() {
         return mainDataSource;
