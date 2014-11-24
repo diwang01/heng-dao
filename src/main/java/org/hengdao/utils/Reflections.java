@@ -75,8 +75,7 @@ public final class Reflections {
      * 循环向上转型,获取对象的DeclaredField.
      */
     protected static Field getDeclaredField(final Object object, final String fieldName) {
-        for (Class<?> superClass = object.getClass(); superClass != Object.class; superClass = superClass
-                .getSuperclass()) {
+        for (Class<?> superClass = object.getClass(); superClass != Object.class; superClass = superClass.getSuperclass()) {
             try {
                 return superClass.getDeclaredField(fieldName);
             } catch (NoSuchFieldException e) {
